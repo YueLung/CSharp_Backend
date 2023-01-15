@@ -1,0 +1,12 @@
+D:\web\my\Backend\Database\Database\bin\Debug\Database.dacpac
+D:\web\my\Backend\Database\Database\bin\Debug\Database.dll
+D:\web\my\Backend\Database\Database\bin\Debug\Database.pdb
+D:\web\my\Backend\Database\Database\obj\Debug\Database.sqlproj.AssemblyReference.cache
+D:\web\my\Backend\Database\Database\obj\Debug\Database.dll
+D:\web\my\Backend\Database\Database\obj\Debug\Database.pdb
+D:\tmp\CSharp_Backend\Database\Database\bin\Debug\Database.dacpac
+D:\tmp\CSharp_Backend\Database\Database\bin\Debug\Database.dll
+D:\tmp\CSharp_Backend\Database\Database\bin\Debug\Database.pdb
+D:\tmp\CSharp_Backend\Database\Database\obj\Debug\Database.sqlproj.AssemblyReference.cache
+D:\tmp\CSharp_Backend\Database\Database\obj\Debug\Database.dll
+D:\tmp\CSharp_Backend\Database\Database\obj\Debug\Database.pdb

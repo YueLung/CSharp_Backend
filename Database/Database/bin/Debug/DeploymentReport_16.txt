@@ -1,0 +1,23 @@
+﻿** 反白顯示
+     將重建的資料表
+       無
+     將卸除的叢集索引
+       [dbo].[Base_Auth_RoleUser] 上的未命名條件約束
+     將建立的叢集索引
+       無
+     資料可能的問題
+       無
+
+** 使用者動作
+     卸除
+       [dbo].[Base_Auth_RoleUser] 上的未命名條件約束 (主索引鍵)
+     建立
+       [dbo].[Base_Auth_MenuItem] (資料表)
+       [dbo].[Base_Setting_MenuGroup] (資料表)
+       [dbo].[Base_Setting_MenuItem] (資料表)
+       [dbo].[test] (資料表)
+
+** 支援動作
+
+專案和目標資料庫的定序設定不同。可能發生部署錯誤。
+

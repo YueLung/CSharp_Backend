@@ -1,0 +1,8 @@
+﻿MERGE INTO [Base_Auth_RoleUser] AS TARGET
+	USING ( VALUES
+		('Admin', '00000000-0000-0000-0000-000000000000'),
+		('Test', '00000000-0000-0000-0000-000000000000')
+	) AS SOURCE ([RoleCode], [UserId])
+	ON (TARGET.[RoleCode] = SOURCE.[RoleCode] And TARGET.[UserId] = SOURCE.[UserId]) WHEN NOT MATCHED THEN 
+INSERT ([RoleCode], [UserId]) 
+VALUES (SOURCE.[RoleCode], SOURCE.[UserId]);

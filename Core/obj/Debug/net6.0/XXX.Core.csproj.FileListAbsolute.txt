@@ -1,0 +1,14 @@
+D:\web\my\Backend\Core\bin\Debug\net6.0\XXX.Core.deps.json
+D:\web\my\Backend\Core\bin\Debug\net6.0\XXX.Core.runtimeconfig.json
+D:\web\my\Backend\Core\bin\Debug\net6.0\XXX.Core.dll
+D:\web\my\Backend\Core\bin\Debug\net6.0\XXX.Core.pdb
+D:\web\my\Backend\Core\obj\Debug\net6.0\XXX.Core.csproj.AssemblyReference.cache
+D:\web\my\Backend\Core\obj\Debug\net6.0\XXX.Core.GeneratedMSBuildEditorConfig.editorconfig
+D:\web\my\Backend\Core\obj\Debug\net6.0\XXX.Core.AssemblyInfoInputs.cache
+D:\web\my\Backend\Core\obj\Debug\net6.0\XXX.Core.AssemblyInfo.cs
+D:\web\my\Backend\Core\obj\Debug\net6.0\XXX.Core.csproj.CoreCompileInputs.cache
+D:\web\my\Backend\Core\obj\Debug\net6.0\XXX.Core.dll
+D:\web\my\Backend\Core\obj\Debug\net6.0\refint\XXX.Core.dll
+D:\web\my\Backend\Core\obj\Debug\net6.0\XXX.Core.pdb
+D:\web\my\Backend\Core\obj\Debug\net6.0\XXX.Core.genruntimeconfig.cache
+D:\web\my\Backend\Core\obj\Debug\net6.0\ref\XXX.Core.dll
