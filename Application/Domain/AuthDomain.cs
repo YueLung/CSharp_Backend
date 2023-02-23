@@ -18,16 +18,19 @@ namespace Application.Domain
         private readonly IRepository<Base_Auth_User> _userRepo;
         private readonly IConfiguration _configuration;
         private readonly IUnitOfWork _unitOfWork;
+        private readonly IFunctionRepository _functionRepository;
 
         public AuthDomain(
             IRepository<Base_Auth_User> userRepo,
             IConfiguration configuration,
-            IUnitOfWork unitOfWork
+            IUnitOfWork unitOfWork,
+            IFunctionRepository functionRepository
         )
         {
             _userRepo = userRepo;
             _configuration = configuration;
             _unitOfWork = unitOfWork;
+            _functionRepository = functionRepository;
         }
 
         public string Signin(SigninRequestModel model)

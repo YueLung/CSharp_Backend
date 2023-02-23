@@ -1,0 +1,7 @@
+﻿CREATE TABLE [dbo].[Base_Setting_CodeType]
+(
+	[Id] UNIQUEIDENTIFIER NOT NULL PRIMARY KEY, 
+    [Code] NVARCHAR(50) NOT NULL, 
+    [Name] NVARCHAR(200) NOT NULL, 
+
+)

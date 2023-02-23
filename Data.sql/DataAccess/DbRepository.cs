@@ -6,6 +6,7 @@ using Microsoft.EntityFrameworkCore;
 using Data.sql.Entities;
 using Core.Interface;
 
+
 namespace Data.sql.DataAccess
 {
     public class DbRepository<TEntity> : IRepository<TEntity> 

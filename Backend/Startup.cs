@@ -1,20 +1,12 @@
-using System;
-using System.Collections.Generic;
-using System.Reflection;
 using Autofac;
-using Backend;
-using Backend.Extensions;
-using Core.Extensions;
-using MediatR;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
+using Backend.Extensions;
+using Backend.Middleware;
+using Core.Extensions;
 
 namespace Backend
 {
@@ -29,7 +21,11 @@ namespace Backend
 
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddControllers();
+            //services.AddControllers();
+
+            services.AddHealthChecks();
+
+            services.AddMapper();
 
             services.AddCorsSettings(Configuration);
 
@@ -56,6 +52,8 @@ namespace Backend
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
+            app.UseHealthChecks("/api/healthcheck");
+
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
@@ -71,9 +69,11 @@ namespace Backend
 
             app.UseCorsSettings();
 
+            app.UseMiddleware<ErrorHandlerMiddleware>();
+
             app.UseHttpsRedirection();
 
-            app.UseSwaggerSettings();
+            app.UseSwagger();
 
             app.UseRouting();
 

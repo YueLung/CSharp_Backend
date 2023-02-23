@@ -8,7 +8,7 @@ using MediatR;
 using MediatR.Extensions.Autofac.DependencyInjection;
 using Data.sql.DataAccess;
 using Core.Interface;
-using Core.Util;
+using Core.Utils;
 
 namespace Backend
 {

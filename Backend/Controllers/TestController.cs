@@ -1,13 +1,16 @@
 ﻿using System;
+using System.Net;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.Extensions.Configuration;
-using Core.Models;
 using MediatR;
+using Core.Models;
 using Application.Command.Auth;
+using Application.Command.Test;
+using Application.Model;
 
 namespace Backend.Controllers
 {
@@ -28,22 +31,33 @@ namespace Backend.Controllers
             return new string[] { "test1", "test2" };
         }
 
+        /// <summary>
+        /// test data
+        /// </summary>
+        /// <returns></returns>
         [AllowAnonymous]
         [HttpGet("data")]
+        [ProducesResponseType(typeof(string), (int)HttpStatusCode.OK)]
+        [ProducesResponseType((int)HttpStatusCode.NotFound)]
         public string GetTestString()
         {
             return "test";
         }
 
         [AllowAnonymous]
-        [HttpPost("signin-test")]
-        public async Task<IActionResult> SigninTest()
+        [HttpPost("user/list")]
+        [ProducesResponseType(typeof(ResponseHasPageModel), (int)HttpStatusCode.OK)]
+        [ProducesResponseType((int)HttpStatusCode.NotFound)]
+        public async Task<IActionResult> GetUserList(UserQueryModel model)
         {
-            var model = new SigninRequestModel()
-            {
-                Account = "Test",
-                Password = "0000"
-            };
+            var result = await _mediator.Send(new GetUserListCommand(model));
+            return Ok(result);
+        }
+
+        [AllowAnonymous]
+        [HttpPost("signin-test")]
+        public async Task<IActionResult> SigninTest(SigninRequestModel model)
+        {
             var result = await _mediator.Send(new MockSignInCommand(model));
             return Ok(result);
         }

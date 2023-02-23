@@ -12,3 +12,5 @@
 :r .\InitializeScripts\Base_Auth_User.sql
 :r .\InitializeScripts\Base_Auth_Role.sql
 :r .\InitializeScripts\Base_Auth_RoleUser.sql
+:r .\InitializeScripts\Base_Setting_Code.sql
+:r .\InitializeScripts\Base_Setting_CodeType.sql

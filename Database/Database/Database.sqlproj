@@ -74,11 +74,18 @@
     <Build Include="dbo\Functions\Fn_Password_Hash.sql" />
     <PostDeploy Include="Script.PostDeployment1.sql" />
     <Build Include="dbo\Stored Procedures\usp_Test.sql" />
+    <Build Include="dbo\Table\Base_Setting_CodeType.sql" />
+    <Build Include="dbo\Table\Base_Setting_Code.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Database.publish.xml" />
     <None Include="InitializeScripts\Base_Auth_User.sql" />
     <None Include="InitializeScripts\Base_Auth_Role.sql" />
     <None Include="InitializeScripts\Base_Auth_RoleUser.sql" />
+    <None Include="InitializeScripts\Base_Setting_CodeType.sql" />
+    <None Include="InitializeScripts\Base_Setting_Code.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <RefactorLog Include="Database.refactorlog" />
   </ItemGroup>
 </Project>
